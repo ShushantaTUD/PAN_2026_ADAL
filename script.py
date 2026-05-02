@@ -19,10 +19,10 @@ import torch
 from transformers import RobertaTokenizer, RobertaForSequenceClassification
 # import torch
 
-def predict(text: str) -> float:
+tokenizer = RobertaTokenizer.from_pretrained("Shushant/ADAL_AI_Detector")
+model     = RobertaForSequenceClassification.from_pretrained("Shushant/ADAL_AI_Detector")
 
-    tokenizer = RobertaTokenizer.from_pretrained("Shushant/ADAL_AI_Detector")
-    model     = RobertaForSequenceClassification.from_pretrained("Shushant/ADAL_AI_Detector")
+def predict(text: str) -> float:    
     model.eval()
 
     enc  = tokenizer(text, return_tensors="pt", truncation=True, max_length=512)
