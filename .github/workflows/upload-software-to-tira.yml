@@ -63,4 +63,4 @@ jobs:
             --task generative-ai-authorship-verification-panclef-2026 \
             --dataset pan26-generative-ai-detection-smoke-test-20260330-training \
             --command 'python3 /app/script.py -i $inputDataset/dataset.jsonl -o $outputDir' \
-            --dry-run
+            # --dry-run
