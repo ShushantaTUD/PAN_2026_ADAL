@@ -89,7 +89,7 @@ MODEL_DIR = os.environ.get("MODEL_DIR", "/opt/model")
 
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-breakpoint()
+
 
 print(f"[adal] Loading model from {MODEL_DIR} on {DEVICE} ...", flush=True)
 tokenizer = AutoTokenizer.from_pretrained(MODEL_DIR, local_files_only=True)
