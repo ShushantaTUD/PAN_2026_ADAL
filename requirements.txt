@@ -1,4 +1,8 @@
 pandas==3.0.2
-torch==2.11.0
-transformers==5.7.0
-argparse
+# torch==2.11.0
+# transformers==5.7.0
+# argparse
+# torch>=2.1
+transformers>=4.40
+huggingface_hub>=0.23
+pandas>=2.0
