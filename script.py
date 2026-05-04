@@ -111,7 +111,8 @@ def predict_batch(texts, batch_size=16, max_length=512):
             max_length=max_length,
         ).to(DEVICE)
         logits = model(**enc).logits
-        probs = torch.softmax(logits, dim=-1)[:, 1]   # column 1 = machine
+        # probs = torch.softmax(logits, dim=-1)[:, 1]   # column 1 = machine
+        probs = torch.softmax(model(**enc).logits, dim=-1)[:, 0]
         probs_out.extend(probs.detach().cpu().tolist())
     return probs_out
 
