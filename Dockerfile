@@ -31,7 +31,7 @@ RUN pip install --upgrade pip && pip install -r /app/requirements.txt
 RUN HF_HUB_OFFLINE=0 TRANSFORMERS_OFFLINE=0 python - <<'PY'
 from huggingface_hub import snapshot_download
 snapshot_download(
-    repo_id="Shushant/ADAL_AI_Detector_v2_panclef",
+    repo_id="Shushant/adal_v5_panclef",
     local_dir="/opt/model",
     local_dir_use_symlinks=False,
 )
